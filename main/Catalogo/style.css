@@ -1,0 +1,136 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+}
+nav{
+    margin: 0;
+    padding: 10px 0;
+    background-color:#333;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    box-shadow: 0 2px 6px rgba(33, 33, 33, 0.516);
+}nav h1 , h2{
+    font-family: helvetica;
+    cursor: pointer;
+    color: whitesmoke;
+    text-shadow: 1.5px 1.5px .5px rgba(137, 141, 138, 0.705);
+}nav h1{
+    font-size: 180%;
+}nav h1:hover, h2:hover{
+    text-decoration: underline;
+}nav h2{
+    font-size: 134%;
+}
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 9.5%;
+}
+#container .boxContainer {
+    background-color: rgb(232, 232, 232);
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border-color: 3px solid black;
+    border-radius: 5px;
+    margin:30px 30px;
+    box-shadow: 0 0 1px black;
+    
+}#container .boxContainer .text{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    cursor: pointer;
+}
+#container .boxContainer .text p:nth-child(1){
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin-top: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
+}
+#container .boxContainer .img:hover legend::after{
+    opacity: 1;
+}
+#container .boxContainer .img legend::after{
+    content: "Mouse Gamer";
+    opacity: 0;
+    color: green;
+    text-shadow: 1px .8px 0 black;
+    font-weight: bolder;
+    font-family: helvetica;
+    font-size: 15px;
+    transition: ease-in-out .6s;
+}
+#container .boxContainer .img legend{
+    position: relative; top: -160px;
+}
+#container .boxContainer img{
+    width:100%; height: 190px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 1px 1.5px 2px 1px rgba(0, 0, 0, 0.253);
+
+}
+#container .boxContainer button{
+    width: 100px; height: 30px;
+    border-radius: 13px;
+    margin-bottom: 5%;
+    transition:.09s;
+    color: rgb(121, 118, 118);
+    font-weight: bolder;
+}#container .boxContainer button:hover{
+    background-color: #e5e5e5;
+    transform: scale(1.02);
+}.informacoes p{
+
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    transform: scale(1.3) rotate(90deg);
+    cursor: pointer;
+    transition: 1s;
+    
+
+}.informacoes p::after{
+    content: "|||";
+}
+.informacoes p:active {
+    color: green;
+    transform: scale(1.3) rotate(180deg);
+}
+.informacoes p:active  p::after{
+    content: "||";
+
+}
+
+footer{
+    background-color: #333;
+    position: absolute;
+    display: flex;
+    float: bottom; width: 100%;
+    margin-top: 5%;
+    padding: 20px 0;
+    justify-content: space-around;
+
+}
+footer a{
+    color: rgb(151, 151, 151);
+    font-weight: lighter;
+    text-decoration: none;
+    margin-right: 10px;
+}footer p{
+    color: rgb(186, 185, 185); 
+    font-weight: lighter;
+
+}
+footer a:hover ,p:hover{
+    text-decoration: underline;
+}

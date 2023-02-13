@@ -1,0 +1,31 @@
+h4{
+    font-size: 1.5em;
+    position: fixed;
+    left: 50%; transform: translateX(-50%);
+    font-family: helvetica;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    padding: 100px 50px;
+
+}form input[type=text]{
+    height: 20px;
+    width: 350px;
+    opacity: .5;
+    border-radius: 5px;
+    border: .2px solid black;
+
+}
+form input[type=text]:focus{
+    opacity: .9;
+}
+form label{
+    margin-top: 15px;
+    opacity: .9;
+}
+#iProduto{
+    height: 30px;
+}
