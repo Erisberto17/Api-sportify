@@ -1,9 +1,7 @@
 const router = require('express').Router();
 const jwt = require('jsonwebtoken')
 
-
 const Person = require('../Models/Person');
-
 
 router.post('/', async (req,res) => {
     const {email, senha} = req.body;
@@ -16,12 +14,13 @@ router.post('/', async (req,res) => {
     if(!user){
         return res.status(422).json({ message: 'Usuario não encontrado'});
     }
-
+    
     try{
         const secret = process.env.SECRET;
 
         const token = jwt.sign({
             id:user._id,
+            secret
         },
         secret
         );

@@ -1,31 +1,91 @@
-h4{
-    font-size: 1.5em;
-    position: fixed;
-    left: 50%; transform: translateX(-50%);
-    font-family: helvetica;
+#opcoes{
+    margin: 4px auto ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-form{
+#opcoes p{
+    margin: 20px 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #444;
+    cursor:pointer;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.324);
+    transition: ease-out .3s;
+}#opcoes p:hover{
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.562);
+} 
+h4{
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 0 3px black;
+}
+main{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 70%;
-    padding: 100px 50px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}main form{
+    display: flex;
+}
 
-}form input[type=text]{
-    height: 20px;
-    width: 350px;
-    opacity: .5;
+#confirmar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position:fixed;
+    top: 150px;
+    background-color: #111111fb;
     border-radius: 5px;
-    border: .2px solid black;
+    box-shadow: 1px 2px 10000px 500px rgba(0, 0, 0, 0.466);
+    width: 25%; height: 160px;
+    color: white;
+    padding: 10px 15px;
+}
+#confirmar p{
+    font-weight: bolder;
+    transition:.05s;
+}#confirmar p:nth-child(2):hover, #confirmar p:nth-child(3):hover{
+    transform:scale(1.1);
+}
 
+#carregando{
+    display: flex;
 }
-form input[type=text]:focus{
-    opacity: .9;
+#carregando p:nth-child(1){
+    font-size: 80px ;
 }
-form label{
-    margin-top: 15px;
-    opacity: .9;
+#carregando p:nth-child(2){
+    font-size: 85px ;
 }
-#iProduto{
-    height: 30px;
+#carregando p:nth-child(3){
+    font-size: 75px;
 }
+#carregando p:nth-child(4){
+    font-size: 80px;
+}
+#carregando p{
+    margin: 109% 2px;
+    transition: 1s;
+    animation-duration: .5s;
+    animation-delay: 0 ;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-name: slidein ;
+    animation-direction: alternate;
+    color:#444; 
+}
+@keyframes slidein{
+    from {
+        margin:0;
+        transform: rotateX(90deg);
+    }
+    
+    to{
+        margin: 0 ;
+
+    }
+} 
+

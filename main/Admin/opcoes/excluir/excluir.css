@@ -1,0 +1,43 @@
+
+main form table tr img{
+    width: 30%;
+    object-fit: contain;
+    aspect-ratio: 3/2;
+}
+main form table{
+    margin: 0 40px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: helvetica;
+    border: 0.3px solid rgba(0, 0, 0, 0.663);
+    cursor: pointer;
+}
+
+main form table tr:last-child td{
+    border: none;
+}
+main form table tr td{
+    border-bottom: 1px solid #999;
+}
+main form table tr td:nth-child(2){
+    width: 350px;
+    text-align:center;
+}
+main form table tr:hover{
+    transform: scale(1.005);
+}
+main form table tr td:nth-child(3){
+    width: 320px;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 15px;
+}
+main form table tr td:nth-child(3):hover{
+    text-decoration: underline #999;
+
+}
+main form table tr td:nth-child(1){
+    width: 350px;
+    text-align: center;
+    font-size: 15px;
+}

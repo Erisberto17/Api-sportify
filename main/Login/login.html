@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="../Reutilizar/nav.css">
+    <link rel="stylesheet" href="login.css">
 
-    <title>Catalógo - Betinho</title>
+    <script src="login.js"></script>
+    
+    <title>BetinhoStore - Logar</title>
 </head>
 <body>
     <nav>
         <h1>Betinho Store</h1>
-        <h2>Catalógo</h2>
-        <a href="../Admin/Admin.html">Admin</a>
+        <h2><a href="../Catalogo/index.html">Cátalogo</a></h2>
+        <a href="../Admin/Admin.html">Registrar</a>
     </nav>
+
     <main>
-        <section>
-            <div id="container">
-                </div>
-            </div>
-        </section>
+        
+        <h4>Login</h4>
+        <div class="login">
+            <input type="text" id="email" placeholder="insira seu Email">
+            <input type="text" id="senha" placeholder="insira sua Senha">
+            <button onclick="logar(email, senha)">Logar</button>
+        </div>
     </main>
+
     <footer>
         <div class="contatos">
             <a href="#">Whatsapp</a>

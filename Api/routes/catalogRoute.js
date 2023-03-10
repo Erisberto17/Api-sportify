@@ -1,3 +1,4 @@
+require('dotenv').config
 const router = require('express').Router();
 const jwt = require('jsonwebtoken')
 
@@ -27,6 +28,25 @@ router.get('/', async (req,res) => {
     .catch((error) => console.log(error));
 
 });
+
+function checkToken (req, res, next) {
+    authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(" ")[1];
+
+    if(!token){
+    return res.status(401).json({message: 'acesso negado'});
+    }
+     try{
+        const secret = process.env.SECRET;
+
+        jwt.verify(token, secret);
+
+        next();
+     }catch(error){
+        res.status(400).json({message:"usuario invalido"});
+     }
+
+}
 
 router.post('/registrar',checkToken, async (req, res)=> {
     const {nome, descricao, img, links} = req.body
@@ -63,26 +83,9 @@ router.post('/registrar',checkToken, async (req, res)=> {
 
 });
 
-function checkToken (req, res, next) {
-    authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(" ")[1];
 
-    if(!token){
-    return res.status(401).json({message: 'acesso negado'});
-    }
-     try{
-        const secret = process.env.SECRET;
 
-        jwt.verify(token, secret);
-
-        next();
-     }catch(error){
-        res.status(400).json({message:"usuario invalido"})
-     }
-
-}
-
-router.delete('/deletar/:id', checkToken, async (req, res) => {
+router.delete('/:id', checkToken, async (req, res) => {
     const id = req.params.id;
     
     try{

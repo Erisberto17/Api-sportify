@@ -6,20 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="Admin.css">
-    <script src="Admin.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="../Reutilizar/nav.css">
+    <link rel="stylesheet" href="./opcoes/excluir/excluir.css">
+    <link rel="stylesheet" href="./opcoes/registrar/registrar.css">
+
+
+    <script type="module" defer src="Admin.js"></script>
+
+    <title>BetinhoStore - Catalogo</title>
 </head>
 <body>
-    <h4>Adicione um novo Produto ao catálogo</h4>
-    <form >
-        <label for="nomeProduto">Nome</label>
-        <input required type="text" id="nProduto" name="nomeProduto">
-        <label for="descProduto">Descrição</label>
-        <input required type="text" name="descProduto" id="dProduto">
-        <label for="imgProduto">Carregue a foto</label>
-        <input required type="file" name="imgProduto" id="iProduto">
+    <nav>
+        <h1>Betinho Store</h1>
+        <h2><a href="../Catalogo/index.html">Catálogo</a></h2>
+        <a href="../Login/login.html">Logar</a>
+    </nav>
 
-        <button >Enviar</button>
-    </form>
+    <main>
+        <div id="opcoes">
+            <p class="op">registrar</p>
+            <p class="op">editar</p>
+            <p class="op">excluir</p>
+        </div>
+        <form >
+
+        </form>
+    </main>
+
+    <footer>
+        <div class="contatos">
+            <a href="#">Whatsapp</a>
+            <a href="#">Mercado Livre</a>
+            <p>Email para contatos : olá213@hotmail.com</p>
+        </div>
+    </footer>
+
+
 </body>
 </html>

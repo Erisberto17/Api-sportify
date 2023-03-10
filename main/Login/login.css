@@ -1,0 +1,32 @@
+main {
+    text-align: center;
+}
+main .login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+main h4{
+    font-size: 30px;
+    font-family: arial;
+    font-weight: bolder;
+    color: rgb(56, 72, 56);
+    text-shadow: 1px 1px 5px rgba(25, 94, 30, 0.755);
+    cursor: pointer;
+}
+main .login input{
+    width: 400px; height: 30px;
+    border-radius: 5px;
+    border: .1px solid rgba(87, 87, 87, 0.639);
+    margin: 10px 0;
+    text-align: center;
+}
+main .login button{
+    width: 100px; height: 35px;
+    border-radius: 5px;
+    border: .1px solid grey;
+    margin: 20px 0 0 0;
+}main .login button:hover{
+    box-shadow:  0 0 3px 1px grey;
+}
