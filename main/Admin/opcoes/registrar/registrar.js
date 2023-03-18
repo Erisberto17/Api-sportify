@@ -71,7 +71,7 @@ async function register(nome, descricao){
 
         console.log('REGISTRADO')
 
-
+        clear()
     })
 
 

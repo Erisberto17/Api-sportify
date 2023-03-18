@@ -1,20 +1,17 @@
 import {carregando} from '../Reutilizar/carregando.js'
-import { regPage, editPage, delPage } from "./opcoes/opPagina.js";
+import { regPage, delPage } from "./opcoes/opPagina.js";
 
-const click = document.querySelectorAll('.op');
+const click = document.querySelectorAll('#opcoes .op');
 click.forEach((opc) => {
     opc.addEventListener("click", () => {
-        opcao(opc.innerHTML)
+        opcao(opc.innerText)
     })
 })
 function opcao(opc){
-    if(opc == "registrar"){
+    if(opc == "Registrar"){
         carregando();
         setTimeout(() => regPage(),2500 )
-    }else if(opc == 'editar'){
-        carregando();
-        setTimeout(() => editPage(),2500 )
-    }else if(opc == 'excluir'){
+    }else if(opc == 'Ações'){
         carregando();
         setTimeout(() => delPage(),2500 )
     }

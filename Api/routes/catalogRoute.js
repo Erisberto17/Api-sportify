@@ -78,6 +78,7 @@ router.post('/registrar',checkToken, async (req, res)=> {
     }
     catch(error){
         res.status(400).json({error:error})
+
     }
 
 
@@ -93,6 +94,28 @@ router.delete('/:id', checkToken, async (req, res) => {
         res.status(200).json({message: 'Produto apagado'})
     }catch(error){
         res.status(500).json({error:error})    }
+})
+
+router.patch('/edit/:id', async (req, res) => {
+    const id = req.params.id;
+    const {nome, descricao, img, links} = req.body;
+
+    const catalogo = {
+        nome: nome,
+        descricao: descricao,
+        img: img,
+        links: links
+    }
+
+    if(nome == '' || descricao == '' || img == "" || links == ''){
+        res.status(422).json({msg:"adicione algo"})
+    }
+    try{
+        await Catalogo.findByIdAndUpdate(id, catalogo);
+        res.status(200).json({msg:"atualizado"})
+    }catch(error){
+        res.status(500).json({error:error})
+    }
 })
 
 module.exports = router

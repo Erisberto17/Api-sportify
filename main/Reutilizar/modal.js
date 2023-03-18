@@ -1,24 +1,23 @@
-import validar from "../Admin/opcoes/excluir/excluir.js"
+import {validarExcluir, validarEditar} from "../Admin/opcoes/excluir/excluir_editar.js"
 
-export default async function modal(produto, element){
-    const caixaModal = `
-    <div id="confirmar">
-        <p>Você esta tentando excluir o produto ( ${produto} ) tem certeza disso ?</p>
-        <p class="sim">Sim</p>
-        <p class="nao">Não</p>
-        </div>
-    `
+export async function modal(caixaModal){
 
-    const main = document.querySelector("main");
-    const div = document.createElement("p");
+    const form = document.querySelector("form");
+    const p = document.createElement("p");
 
-    div.classList.add = "divP"
-    div.innerHTML = caixaModal
-    main.innerHTML += div.innerHTML
+    p.classList.add = "divP"
+    p.innerHTML = caixaModal
+    form.innerHTML += p.innerHTML
 
-    const escolha = document.querySelectorAll("#confirmar p"); 
+}
+export function deletar(element){
+    const escolha = document.querySelectorAll("#confirmar p");
+    validarExcluir(escolha, element)
 
-        validar(escolha, element)
+}
+export function edit(element){
+    const escolha = document.querySelectorAll("#confirmar p");
+    validarEditar(escolha, element)
 }
 
 

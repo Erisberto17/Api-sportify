@@ -1,6 +1,6 @@
 import { cadastrarProduto } from "./registrar/registrar.js";
 import {add} from "./registrar/addCaixa.js";
-import {mostrarProduto} from './excluir/excluir.js';
+import {mostrarProduto} from './excluir/excluir_editar.js';
 
 export function regPage(){
     
@@ -75,15 +75,6 @@ export function delPage(){
         const tbody = document.querySelector("tbody");
 
         mostrarProduto(tbody);
-    
-    }
-export function editPage(){
-            const pagina = `
-            <h1>olá karaio</h1>
-            `;
-        const form = document.querySelector("form");
-    
-        form.innerHTML = pagina;
     
     }
     

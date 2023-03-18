@@ -1,3 +1,5 @@
+import {mostrarProduto} from "./produto/produto.js";
+
 async function getData(){
     const url = "http://localhost:8080/catalogo"
 
@@ -8,8 +10,6 @@ async function getData(){
 }
 
 function createElements(produtos){
-
-    console.log(produtos)
 
     produtos.forEach(element => {
         const seção = document.querySelector("#container");
@@ -40,6 +40,7 @@ function createElements(produtos){
 
         direcionar.addEventListener("click", (e) => {
             e.preventDefault()
+
             const produto = element;
 
             mostrarProduto(produto)
@@ -47,10 +48,5 @@ function createElements(produtos){
     });
 }
 
-function mostrarProduto(produto){
-
-    console.log(produto)
-
-}
 getData();
 
